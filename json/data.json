@@ -1,0 +1,62 @@
+{
+    "menu" : [
+        {"image" : "menu2.png"}, {"image" : "menu3.png"}, {"image" : "menu4.png"}, {"image" : "menu5.png"}, {"image" : "menu6.png"}
+    ],
+    "carousel" : [
+        {"image" : "carousel2.jpg"}, {"image" : "carousel3.jpg"}, {"image" : "carousel4.jpg"}
+    ],
+    "event" : [
+        {"image" : "event1.jpg"}, {"image" : "event2.jpg"}, {"image" : "event3.jpg"}
+    ],
+    "event1" : [
+        {"image" : "event1.jpg"}, {"image" : "event2.jpg"}, {"image" : "event3.jpg"}, {"image" : "event4.jpg"}
+    ],
+    "event2" : [
+        {"image" : "event1.jpg"}, {"image" : "event2.jpg"}, {"image" : "event3.jpg"}, {"image" : "event4.jpg"}, {"image" : "event5.jpg"}, {"image" : "event6.jpg"} 
+    ],
+    "newMovie" : [
+        {"id" : 1,"title" : "BẠN KHÔNG THÂN", "image" : "newMovie1.jpg", "director" : "Atta Hemwadee", "actor" : "Anthony Buisseret, Pisitpol Ekaphongpisit, Thitiya Jirapornsilp", "genre" : "Hài, Tình cảm", "premiere" : "01/12/2023", "time" : "104 phút", "language" : "Tiếng Thái - Phụ đề tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "Bắt đầu với niềm đam mê làm phim bất diệt cùng những ý tưởng lớn, nhóm học sinh trung học của “Bạn Không Thân” chính là hội bạn trong “hoạn nạn” lại cần tới nhau tại một cuộc thi làm phim ngắn dựa trên câu chuyện về cuộc đời của người bạn cùng lớp mà họ yêu quý. Bằng vốn hiểu biết có giới hạn về người bạn quá cố, cả nhóm với sự nỗ lực 200% đã dần khám phá ra những bí mật ẩn giấu gây bất ngờ tới mức có thể thay đổi quan điểm về niềm đam mê của hội thanh thiếu niên này mãi mãi.", "href" : "jXuDMm55GYo"}, 
+        {"id" : 2,"title" : "TAYLOR SWIFT: THE ERAS TOUR", "image" : "newMovie2.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "KudedLV0tP0"}, 
+        {"id" : 3,"title" : "MỸ NHÂN ĐẠO CHÍCH", "image" : "newMovie3.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "Ntn5azFNJMc"}, 
+        {"id" : 4,"title" : "KỴ SĨ BÓNG ĐÊM CHỖI DẬY", "image" : "newMovie4.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "zHEQs2KB25s"}, 
+        {"id" : 5,"title" : "MovieName", "image" : "newMovie5.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"},
+        {"id" : 6,"title" : "MovieName", "image" : "newMovie6.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 7,"title" : "MovieName", "image" : "newMovie7.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 8,"title" : "MovieName", "image" : "newMovie8.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 9,"title" : "MovieName", "image" : "newMovie9.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 10,"title" : "MovieName", "image" : "newMovie10.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"},
+        {"id" : 11,"title" : "MovieName", "image" : "newMovie11.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 12,"title" : "MovieName", "image" : "newMovie12.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 13,"title" : "MovieName", "image" : "newMovie13.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 14,"title" : "MovieName", "image" : "newMovie14.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 15,"title" : "MovieName", "image" : "newMovie15.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"},
+        {"id" : 16,"title" : "MovieName", "image" : "newMovie16.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 17,"title" : "MovieName", "image" : "newMovie17.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 18,"title" : "MovieName", "image" : "newMovie18.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 19,"title" : "MovieName", "image" : "newMovie19.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}, 
+        {"id" : 20,"title" : "MovieName", "image" : "newMovie20.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"},
+        {"id" : 21,"title" : "MovieName", "image" : "newMovie21.jpg", "director" : "directorName", "actor" : "actor1", "genre" : "action", "premiere" : "10/11/2023", "time" : "104 phút", "language" : "Tiếng Anh - Phụ đề Tiếng Việt", "rated" : "T13 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 13 TUỔI TRỞ LÊN (13+)", "type" : "4Dx", "content" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "href" : "jXuDMm55GYo"}
+    ],
+    "cinema" : [
+        {"id" : 1, "name" : "CGV Hùng Vương Plaza"}
+    ],
+    "type" : [
+        {"image" : "type1.png"}, 
+        {"image" : "type2.png"}, 
+        {"image" : "type3.png"}, 
+        {"image" : "type4.png"}, 
+        {"image" : "type5.png"}, 
+        {"image" : "type6.png"}, 
+        {"image" : "type7.png"}, 
+        {"image" : "type8.png"}, 
+        {"image" : "type9.png"}, 
+        {"image" : "type10.png"}, 
+        {"image" : "type11.png"}
+    ],
+    "combo" : [
+        {"name" : "PEANUTS SINGLE COMBO 2023", "descripe" : "01 ly nhân vật Peanuts (kèm nước)<br>* Nhận ngay trong ngày xong phim<br>** Thêm 39,000đ nhận ngay 1 bắp ngọt lớn<br>*** Mẫu ly phụ thuộc vào số lượng của rạp<br>", "price" : 199000},
+        {"name" : "JUNGLE BROWN COUPLE COMBO", "descripe" : "2 bình Jungle Brown + 2 nước siêu lớn + 1 bắp ngọt lớn<br>* Nhận trong ngày xem phim<br>** Mẫu ly phụ thuộc vào số lượng hàng tại rạp<br>", "price" : 490000},
+        {"name" : "MILO COMBO 2023", "descripe" : "1 milo lớn + 1 nước ngọt siêu lớn + 1 bắp ngọt lớn<br>* Nhận trong ngày xem phim.<br>** Miễn phí đổi vị bắp Caramel<br>*** Đổi vị phô mai phụ thu thêm tiền<br>", "price" : 99000},
+        {"name" : "PEANUTS COUPLE COMBO 2023", "descripe" : "02 ly nhân vật Peanuts (kèm nước)<br>* Nhận ngay trong ngày xem phim<br>** Thêm 39,000đ nhận ngay 1 bắp ngọt<br>*** Mẫu ly phụ thuộc vào số lượng của rạp<br>", "price" : 379000}
+    ]
+}

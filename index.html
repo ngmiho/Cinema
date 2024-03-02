@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CGV - Bootstrap demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .footer-a>* {
+      color: black;
+      text-decoration: none;
+    }
+
+    #testto:hover {
+      width: 35px;
+    }
+
+    [href] {
+      text-decoration: none;
+      color: white;
+    }
+
+    .seatColor {
+      color: white;
+      background-color: rgb(156, 64, 64) !important;
+    }
+  </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <div>
+    <!-- banner 2 bên -->
+    <div ng-hide="isDetail" class="sticky-top">
+      <div class="row card-img-overlay">
+        <div class="col-md-1 offset-1">
+          <img src="image/banner.png" alt="">
+        </div>
+        <div class="col-md-1 offset-8">
+          <img src="image/banner.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- banner 2 bên -->
+
+    <!-- login -->
+    <div ng-if="!isLogin" class="container text-center">
+      <div class="row justify-content-md-end">
+        <button type="button" class="col-md-2 btn btn-light text-secondary fw-bold rounded-circle" style="width:130px;">
+          <a href="#!signup" style="text-decoration: none; color:black;">Đăng Ký</a>
+        </button>
+        <button type="button" class="col-md-2 btn btn-light text-secondary fw-bold rounded-circle mx-2"
+          style="width:130px;">
+          <a href="#!signin" style="text-decoration: none; color:black;">Đăng Nhập</a>
+        </button>
+        <div class="col-md-2 mb-3 btn-light text-secondary pt-3">
+          <div class="input-group">
+            <button class="btn btn-outline-secondary active fw-bold" type="button">VN</button>
+            <button class="btn btn-outline-secondary fw-bold" type="button">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="isLogin" class="container text-center">
+      <div class="row justify-content-md-end">
+
+        <button type="button" class="col-md-2 btn btn-light text-secondary fw-bold rounded-circle" style="width:130px;">
+          <a href="#!account" style="text-decoration: none; color:black;">Tài Khoản</a>
+        </button>
+        <button type="button" class="col-md-2 btn btn-light text-secondary fw-bold rounded-circle mx-2"
+          style="width:130px;">
+          <a ng-click="logout()" href="#!home" style="text-decoration: none; color:black;">Đăng Xuất</a>
+        </button>
+        <div class="col-md-2 mb-3 btn-light text-secondary pt-3">
+          <div class="input-group">
+            <button class="btn btn-outline-secondary active fw-bold" type="button">VN</button>
+            <button class="btn btn-outline-secondary fw-bold" type="button">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login -->
+
+    <!-- navbar -->
+    <div class="card border-5 ms-1">
+      <div class="container-md-fluid bg-body-secondary">
+        <ul class="nav justify-content-center py-4 ms-5">
+          <li class="nav-item ms-5 ps-5">
+            <a ng-click="setDetailNull()" class="nav-link active mt-5 text-secondary fw-bold" aria-current="page"
+              href="#!home">
+              <img src="image/cgvlogo_gray.png" alt="" class="d-block w-75">
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mt-5 text-secondary fw-bold" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              PHIM
+            </a>
+            <ul class="dropdown-menu bg-secondary">
+              <div class="card border-light bg-secondary mx-1">
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Phim Đang Chiếu</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Phim Sắp Chiếu</a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mt-5 text-secondary fw-bold" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              RẠP PHIM
+            </a>
+            <ul class="dropdown-menu bg-secondary">
+              <div class="card border-light bg-secondary mx-1">
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Tất Cả Các Rạp</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Rạp Đặc Biệt</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Rạp 3D</a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mt-5 text-secondary fw-bold" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              CULTUREPPLEX
+            </a>
+            <ul class="dropdown-menu bg-secondary">
+              <div class="card border-light bg-secondary mx-1">
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Quyền Online</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Thuê Rạp & Vé Nhóm</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">E-CGV</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">CGV EGift</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">CGV Rules</a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mt-5 text-secondary fw-bold" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              TUYỂN DỤNG
+            </a>
+            <ul class="dropdown-menu bg-secondary">
+              <div class="card border-light bg-secondary mx-1">
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Tuyển Dụng</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Khối Văn Phòng</a></li>
+                <li><a class="dropdown-item btn-light fw-bold" href="#!home">Khối Cụm Rạp</a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link disabled " aria-disabled="true">
+              <span class="text-secondary fw-bold">KÊNH <span><i class="fa-sharp fa-solid fa-c fa-flip"
+                    style="color: #68686a;"></i></span>INE</span>
+              <img src="image/mua-ve_ngay_gray.png" alt="" class="w-25">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- navbar -->
+
+    <!-- menu -->
+    <div class="container">
+      <div class="row justify-content-md-center mt-4">
+        <div class="col-md-1">
+          <a ng-click="setDetailNull()" href="#!home" class="badge border-end border-4">
+            <img src="image/menu/menu1.png" alt="">
+          </a>
+        </div>
+        <a ng-click="setDetailNull()" href="#!home" class="col-md-1 mx-3" ng-repeat="p in arrMenu">
+          <span class="badge border-end border-4">
+            <img src="image/menu/{{p.image}}" alt="">
+          </span>
+        </a>
+        <div class="col-md-8">
+          <hr>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!-- menu -->
+
+    <!-- carousel -->
+    <div ng-hide="isDetail" class="container-fluid">
+      <div class="card">
+        <img src="image/background.jpg" class="card-img" alt="..." style="height:33rem;">
+        <div class="card-img-overlay">
+          <div class="container-md">
+            <div class="row justify-content-md-center">
+              <div class="col-md-10">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                      class="bg-secondary border border-light rounded-circle active" aria-current="true"
+                      aria-label="Slide 1" style="height:20px;width:20px;"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$index + 1}}"
+                      aria-label="Slide {{$index + 2}}" ng-repeat="p in arrCarousel"
+                      class="bg-secondary border border-light rounded-circle" style="height:20px;width:20px;"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="image/carousel/carousel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" ng-repeat="p in arrCarousel">
+                      <img src="image/carousel/{{p.image}}" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- carousel -->
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-10">
+        <div class="ng-view"></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-1" ng-repeat="p in arrType">
+          <a href="#">
+            <img src="image/type/{{p.image}}" alt="" class="d-block">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 offset-1 ">
+          <hr class="border-4">
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-2">
+          <b class="fs-6">CGV Việt Nam</b>
+          <div class="footer-a">
+            <a href="#">Giới Thiệu</a><br>
+            <a href="#">Tiện Ích Online</a><br>
+            <a href="#">Thẻ Quà Tặng</a><br>
+            <a href="#">Tuyển Dụng</a><br>
+            <a href="#">Liên Hệ QC CGV</a><br>
+            <a href="#">Dành cho đối tác</a><br>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <b class="fs-6">Điều khoản sử dụng</b>
+          <div class="footer-a">
+            <a href="#">Điều Khoản Chung</a><br>
+            <a href="#">Điều Khoản Giao Dịch</a><br>
+            <a href="#">Chính Sách Thanh Toán</a><br>
+            <a href="#">Chính Sách Bảo Mật</a><br>
+            <a href="#">Câu Hỏi Thường Gặp</a><br>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <b class="fs-6">Kết nối với chúng tôi</b>
+          <div class="row footer-a">
+            <a href="#">
+              <img id="testto" src="image/connect/facebook.png" alt="">
+              <img id="testto" src="image/connect/youtube.png" alt="">
+              <img id="testto" src="image/connect/instagram.png" alt="">
+              <img id="testto" src="image/connect/zalo.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <b class="fs-6">Chăm soc khách hàng</b>
+          <div class="footer-a">
+            <a href="#">Hotline: 1900 6017</a><br>
+            <a href="#">Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)</a><br>
+            <a href="#">Email hỗ trợ: hoidap@cgv.vn</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 offset-1">
+          <hr class="border-4">
+        </div>
+      </div>
+      <div class="row align-items-center ms-5">
+        <div class="col-md-1 offset-2">
+          <img src="image/footer.png" alt="" class="d-block w-100">
+        </div>
+        <div class="col-md-6">
+          <h5>CÔNG TY TNHH 1 THÀNH VIÊN ngmiho</h5>
+          <span>Fullname:Nguyễn Minh Hoàng</span><br>
+          <span>Phone: 0813833677</span><br>
+          <span>Email: minhhoang25498@gmail.com - hoangnmps26822@fpt.edu.vn</span><br>
+          <span>COPYRIGHT ngmiho</span>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <img src="image/footer.jpg" alt="" style="height:150px;">
+      </div>
+    </div>
+    <!-- footer -->
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="https://kit.fontawesome.com/288196cb77.js" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

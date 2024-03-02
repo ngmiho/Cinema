@@ -1,0 +1,357 @@
+<!-- event - navs + tabs -->
+<div class="container text-center">
+    <div class="row justify-content-md-center my-4">
+      <div class="col-md-3">
+        <hr>
+        <hr>
+      </div>
+      <div class="col-md-auto mx-5 px-5">
+        <img src="image/event.png" alt="" style="height:50px;">
+      </div>
+      <div class="col-md-3">
+        <hr>
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <div class="card border-light" style="width:450px;">
+          <img src="image/event_banner.png" alt="">
+          <div class="card-img-overlay">
+            <p class="nav ms-5 mt-1" id="myTab" role="tablist">
+                <a class="active text-light" id="event1-tab" data-bs-toggle="tab" data-bs-target="#event1-tab-pane" type="button" role="tab" aria-controls="event1-tab-pane" aria-selected="true"
+                ng-click="checkEvent(1)" style="text-decoration:none;">
+                  <i ng-show="checkEvent1" class="fa-solid fa-hand-point-right"></i>
+                  Thành Viên CGV
+                </a> <span class="text-light mx-4">|</span>
+                <a class="text-light" id="event2-tab" data-bs-toggle="tab" data-bs-target="#event2-tab-pane" type="button" role="tab" aria-controls="event2-tab-pane" aria-selected="false"
+                ng-click="checkEvent(2)" style="text-decoration:none;">
+                <i ng-show="checkEvent2" class="fa-solid fa-hand-point-right"></i>
+                  Tin Mới & Ưu Đãi
+                </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="event1-tab-pane" role="tabpanel" aria-labelledby="event1-tab" tabindex="0">
+              <div class="row justify-content-md-center align-items-center">
+                <div class="col-md-1">
+                  <button type="button" class="btn btn-secondary text-light rounded-start-circle pe-0"
+                  ng-if="arrEvent1.length > limitEvent && startEvent1 != 0"
+                  ng-click="moveEvent('evt1', 1)">
+                    <
+                  </button>
+                </div>
+                <div class="col-md-auto my-3" ng-repeat="p in arrEvent1 | limitTo : limitEvent : startEvent1">
+                  <a href="#">
+                    <img src="image/event/event1/{{p.image}}" alt="" style="width:220px;height:220px;">
+                  </a>
+                </div>
+                <div class="col-md-1">
+                  <button type="button" class="btn btn-secondary text-light rounded-end-circle fw-bold ps-0"
+                  ng-if="arrEvent1.length > limitEvent && startEvent1 != arrEvent1.length - limitEvent"
+                  ng-click="moveEvent('evt1', 2)">
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="event2-tab-pane" role="tabpanel" aria-labelledby="event2-tab" tabindex="0">
+              <div class="row justify-content-md-center align-items-center">
+                <div class="col-md-1">
+                  <button type="button" class="btn btn-secondary text-light rounded-start-circle pe-0"
+                  ng-show="arrEvent2.length > limitEvent && startEvent2 != 0"
+                  ng-click="moveEvent('evt2', 1)">
+                    <
+                  </button>
+                </div>
+                <div class="col-md-auto my-3" ng-repeat="p in arrEvent2 | limitTo : limitEvent : startEvent2">
+                  <a href="#">
+                    <img src="image/event/event2/{{p.image}}" alt="" style="width:220px;height:220px;">
+                  </a>
+                </div>
+                <div class="col-md-1">
+                  <button type="button" class="btn btn-secondary text-light rounded-end-circle fw-bold ps-0"
+                  ng-show="arrEvent2.length > limitEvent && startEvent2 != arrEvent2.length - limitEvent"
+                  ng-click="moveEvent('evt2', 2)">
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- event -->
+  
+  <!-- new movie - navs + tabs -->
+  <div class="container text-center">
+    <div class="row justify-content-md-center my-4">
+      <div class="col-md-3">
+        <hr>
+        <hr>
+      </div>
+      <div class="col-md-auto">
+        <img src="image/newMovie.png" alt="" style="height:50px;">
+      </div>
+      <div class="col-md-3">
+        <hr>
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-md-center align-items-center">
+      <div class="col-md-1">
+        <button type="button" class="btn btn-secondary text-light rounded-start-circle pe-0"
+        ng-if="arrNewMovie.length > limitEvent && startNewMovie != 0"
+        ng-click="moveEvent('newMovie', 1)">
+          <
+        </button>
+      </div>
+      
+      <div class="col-md-auto my-3" ng-repeat="p in arrNewMovie | limitTo : limitEvent : startNewMovie">
+        <div class="card text-bg-dark"
+        ng-mouseenter="showMovie=true" ng-mouseleave="showMovie=false">
+          <a href="#">
+            <img src="image/newMovie/{{p.image}}" alt="" style="width:230px;height:360px;">
+          </a>
+          <div class="card-img-overlay circle-4" ng-show="showMovie">
+            <br><br><br>
+            <div class="row">
+              <div class="col-md-6 offset-3">
+                <div class="card text-align-center border-0">
+                  <button ng-click="setDetail(p); setVideoSrc()" type="button" class="btn btn-danger pb-3" data-bs-toggle="modal" data-bs-target="#trailerModal">
+                    <span class="fs-2">-></span>
+                    <br>
+                    play
+                  </button>
+                </div>
+              </div>
+              <br><br><br><br><br><br><br>
+              <div class="col-md-12 pt-3">
+                <div class="row justify-content-center bg-dark text-light fw-bold" >
+                  <div class="col-md-12 border-0 fs-4" >
+                    {{p.title}}
+                  </div>
+                  <a ng-click="setDetail(p)" class="col-md-7 btn btn-danger fw-bold" href="#!detail">
+                    XEM CHI TIẾT
+                  </a>
+                  <button ng-click="setDetail(p); setTicket(p)" type="button" class="col-md-5 btn btn-danger fw-bold" data-bs-toggle="modal" data-bs-target="#cinemaModal">
+                    MUA VÉ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-secondary text-light rounded-end-circle fw-bold ps-0"
+        ng-if="arrNewMovie.length > limitEvent && startNewMovie != arrNewMovie.length - limitEvent"
+        ng-click="moveEvent('newMovie', 2)">
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Vertically centered modal -->
+  <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="width:675px;">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <iframe id="md" width="640" height="360" src="https://www.youtube.com/embed/{{movieDetail.href}}"
+          title="{{movieDetail.title}}" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Vertically centered modal -->
+  <!-- Choose cinema place modal -->
+  <div class="modal fade" id="cinemaModal" tabindex="-1" aria-labelledby="cinemaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content" style="width:1250px;height:660px;">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center bg-dark text-light">
+            <hr class="mt-3">
+            <!-- date -->
+            <div class="col-md-12 p-4">
+                <div class="d-inline">
+                    <button ng-click="getDay('28/12')" class="{{day === '28/12' ? 'btn btn-secondary active' : 'btn btn-secondary'}}">
+                      <div class="row">
+                        <div class="col-md-5">
+                          12<br>thu
+                        </div>
+                        <div class="col-md-7">
+                          <h2>28</h2>
+                        </div>
+                      </div>
+                    </button>
+                </div>
+                <div class="d-inline">
+                  <button ng-click="getDay('29/12')" class="{{day === '29/12' ?'btn btn-secondary active' : 'btn btn-secondary'}}">
+                    <div class="row">
+                      <div class="col-md-5">
+                        13<br>fri
+                      </div>
+                      <div class="col-md-7">
+                        <h2>29</h2>
+                      </div>
+                    </div>
+                  </button>
+              </div>
+              <div class="d-inline">
+                <button ng-click="getDay('30/12')" class="{{day === '30/12' ?'btn btn-secondary active' : 'btn btn-secondary'}}">
+                  <div class="row">
+                    <div class="col-md-5">
+                      14<br>sat
+                    </div>
+                    <div class="col-md-7">
+                      <h2>30</h2>
+                    </div>
+                  </div>
+                </button>
+            </div>
+            </div>
+            <!-- date -->
+            <hr class="my-4">
+            <!-- place -->
+            <div class="col-md-12 p-4">
+              <div class="d-inline">
+                <button ng-click="getCity('Hà Nội')" class="{{city === 'Hà Nội' ?'btn btn-secondary active' : 'btn btn-secondary'}}">Hà Nội</button>
+              </div>
+              <div class="d-inline">
+                <button ng-click="getCity('Đà Nẵng')" class="{{city === 'Đà Nẵng' ?'btn btn-secondary active' : 'btn btn-secondary'}}">Đà Nẵng</button>
+              </div>
+              <div class="d-inline">
+                <button ng-click="getCity('TP.Hồ Chí Minh')" class="{{city === 'TP.Hồ Chí Minh' ?'btn btn-secondary active' : 'btn btn-secondary'}}">TP.Hồ Chí Minh</button>
+              </div>
+            </div>
+            <!-- place -->
+            <hr class="my-4">
+            <!-- cinema -->
+            <div class="col-md-12 p-4">
+              <h4>CGV Hùng Vương Plaza</h4>
+              <div>
+                <span>RẠP 2D</span><br>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                 ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('11:30 PM');" class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">11:30 PM</a>
+                </button>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                 ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('14:30 PM'); " class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">14:30 PM</a>
+                </button>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                 ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('19:30 PM'); " class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">19:30 PM</a>
+                </button>
+              </div>
+              <br class="py-1">
+              <div>
+                <span>RẠP 3D</span><br>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                 ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 3D'); getTime('13:40 PM'); " class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">13:40 PM</a>
+                </button>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                 ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 3D'); getTime('18:10 PM'); " class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">18:10 PM</a>
+                </button>
+              </div>
+              <hr>
+            </div>
+            <div class="col-md-12 p-4">
+              <h4>CGV Menas Mall (CGV CT Plaza)</h4>
+              <div>
+                <span>RẠP 2D</span><br>
+                <button class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">22:00 PM</a>
+                </button>
+                <button class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">22:00 PM</a>
+                </button>
+              </div>
+              <br class="py-1">
+              <div>
+                <span>RẠP 3D</span><br>
+                <button class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">22:00 PM</a>
+                </button>
+                <button class="btn btn-secondary">
+                  <a href="#!seat" class="p-4">22:00 PM</a>
+                </button>
+              </div>
+              <hr>
+            </div>
+            <!-- cinema -->
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Choose cinema place modal -->
+  <!-- new movie -->
+  
+  <!-- another -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1 ">
+        <hr class="border-4">
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-2">
+        <div class="card border-4 mt-5">
+          <div class="card mx-1 my-1">
+            <button class="btn btn-secondary">
+              <a href="#">
+                <img src="image/event/event/event1.jpg" alt="" class="d-block w-100">
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card border-4">
+          <div class="card">
+            <button class="btn btn-secondary">
+              <a href="#">
+                <img src="image/event/event/event2.jpg" alt="" class="d-block w-100">
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card border-4 mt-5">
+          <div class="card mx-1 my-1">
+            <button class="btn btn-secondary">
+              <a href="#">
+                <img src="image/event/event/event3.jpg" alt="" class="d-block w-100">
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <hr class="border-4">
+      </div>
+    </div>
+  </div>
+  <!-- another -->

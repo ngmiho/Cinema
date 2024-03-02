@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Place</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      [href] {text-decoration: none; color: white;}
+    </style>
+</head>
+<body>
+    <div class="row justify-content-center bg-dark text-light">
+        <hr class="mt-3">
+        <!-- date -->
+        <div class="col-md-12 p-4">
+            <div class="d-inline">
+                <button ng-click="getDate('28/12')" class="btn btn-secondary">
+                  <div class="row">
+                    <div class="col-md-5">
+                      12<br>thu
+                    </div>
+                    <div class="col-md-7">
+                      <h2>28</h2>
+                    </div>
+                  </div>
+                </button>
+            </div>
+            <div class="d-inline">
+              <button ng-click="getDate('29/12')" class="btn btn-secondary">
+                <div class="row">
+                  <div class="col-md-5">
+                    12<br>thu
+                  </div>
+                  <div class="col-md-7">
+                    <h2>29</h2>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="d-inline">
+              <button ng-click="getDate('30/12')" class="btn btn-secondary">
+                <div class="row">
+                  <div class="col-md-5">
+                    12<br>thu
+                  </div>
+                  <div class="col-md-7">
+                    <h2>30</h2>
+                  </div>
+                </div>
+              </button>
+          </div>
+        </div>
+        <!-- date -->
+        <hr class="my-4">
+        <!-- place -->
+        <div class="col-md-12 p-4">
+          <div class="d-inline">
+            <button ng-click="getCity('Hà Nội')" class="btn btn-secondary">Hà Nội</button>
+          </div>
+          <div class="d-inline">
+            <button ng-click="getCity('Đà Nẵng')" class="btn btn-secondary">Đà Nẵng</button>
+          </div>
+          <div class="d-inline">
+            <button ng-click="getCity('TP.Hồ Chí Minh')" class="btn btn-secondary">TP.Hồ Chí Minh</button>
+          </div>
+        </div>
+        <!-- place -->
+        <hr class="my-4">
+        <!-- cinema -->
+        <div class="col-md-12 p-4">
+          <h4>CGV Hùng Vương Plaza</h4>
+          <div>
+            <span>RẠP 2D</span><br>
+            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+             ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('11:30 PM'); " class="btn btn-secondary btn-close">
+              <a href="#!cart" class="p-4">11:30 PM</a>
+            </button>
+            <button ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('14:30 PM'); " class="btn btn-secondary">
+              <a href="#!cart" class="p-4">14:30 PM</a>
+            </button>
+            <button ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 2D'); getTime('19:30 PM'); " class="btn btn-secondary">
+              <a href="#!cart" class="p-4">19:30 PM</a>
+            </button>
+          </div>
+          <br class="py-1">
+          <div>
+            <span>RẠP 3D</span><br>
+            <button ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 3D'); getTime('13:40 PM'); " class="btn btn-secondary">
+              <a href="#!cart" class="p-4">13:40 PM</a>
+            </button>
+            <button ng-click="getCinemaName('CGV Hùng Vương Plaza'); getType('RẠP 3D'); getTime('18:10 PM'); " class="btn btn-secondary">
+              <a href="#!cart" class="p-4">18:10 PM</a>
+            </button>
+          </div>
+          <hr>
+        </div>
+        <div class="col-md-12 p-4">
+          <h4>CGV Menas Mall (CGV CT Plaza)</h4>
+          <div>
+            <span>RẠP 2D</span><br>
+            <button class="btn btn-secondary">
+              <a href="#!cart" class="p-4">22:00 PM</a>
+            </button>
+            <button class="btn btn-secondary">
+              <a href="#!cart" class="p-4">22:00 PM</a>
+            </button>
+          </div>
+          <br class="py-1">
+          <div>
+            <span>RẠP 3D</span><br>
+            <button class="btn btn-secondary">
+              <a href="#!cart" class="p-4">22:00 PM</a>
+            </button>
+            <button class="btn btn-secondary">
+              <a href="#!cart" class="p-4">22:00 PM</a>
+            </button>
+          </div>
+          <hr>
+        </div>
+        <!-- cinema -->
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="https://kit.fontawesome.com/288196cb77.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

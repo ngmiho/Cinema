@@ -1,0 +1,30 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-4 my-4">
+      <!-- Sign In Form -->
+     <div class="card p-4">
+      <form ng-submit="submitForm()">
+          <div class="mb-3">
+              <h2 align="middle">ĐĂNG NHẬP</h2>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              ng-model="formData.username">
+              <div id="emailHelp" class="form-text">Email của bạn chỉ chúng tôi biết.</div>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+              <input type="password" class="form-control" id="exampleInputPassword1"
+              ng-model="formData.password">
+          </div>
+          <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Nhớ thông tin?</label>
+          </div>
+          <button type="submit" class="btn btn-secondary">Đăng Nhập</button>
+          <button type="reset" class="btn btn-secondary"><a href="#!home">Hủy</a></button>
+      </form>
+     </div>
+      <!-- Sign In Form -->
+  </div>
+</div>

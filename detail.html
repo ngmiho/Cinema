@@ -1,0 +1,88 @@
+<!-- Detail -->
+<div class="container">
+  <article class="row justify-content-md-center">
+    <div class="col-md-10">
+      <h3 class="my-2 fw-bolder">Nội Dung Phim</h3>
+      <hr class="fw-3">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="image/newMovie/{{movieDetail.image}}" alt="">
+        </div>
+        <div class="col-md-9">
+          <div class="row my-3">
+            <div class="col-md-12">
+              <h3>{{movieDetail.title}}</h3>
+              <hr>
+              Đạo diễn: {{movieDetail.director}}<br>
+              Diễn viện: {{movieDetail.actor}}<br>
+              Thể loại: {{movieDetail.genre}}<br>
+              Khởi chiếu: {{movieDetail.premiere}}<br>
+              Thời lượng: {{movieDetail.time}}<br>
+              Ngôn ngữ: {{movieDetail.language}}<br>
+              Rated: {{movieDetail.rated}}<br>
+              {{movieDetail.type}}
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-5">
+                  <button class="btn btn-primary" style="width:150px;">
+                    (y) Like 106
+                  </button>
+                </div>
+                <div class="col-md-7">
+                  <button ng-click="setDetailNull()" class="btn btn-danger" style="width:150px;">
+                    <a href="#!home">Trang Chủ</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="list-group" id="list-tab" role="tablist">
+            <div class="card border-light" style="width:450px;">
+              <img src="image/event_banner.png" alt="">
+              <div class="card-img-overlay">
+                <p class="nav ms-5 mt-1" id="myTab" role="tablist">
+                    <div class="row justify-content-md-center">
+                      <div class="col-md-5">
+                        <button ng-click="checkEvent(1)" class="btn text-light active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home" style="width:150px;">
+                          <i ng-show="checkEvent1" class="fa-solid fa-hand-point-right"></i>
+                          Chi tiết
+                        </button>
+                      </div>
+                      <div class="col-md-5">
+                        <button ng-click="checkEvent(2); setVideoSrc();" class="btn text-light" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile" style="width:150px;">
+                          <i ng-show="checkEvent2" class="fa-solid fa-hand-point-right"></i>
+                          Trailer
+                        </button>
+                      </div>
+                    </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 my-4">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+              {{movieDetail.content}}
+            </div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+              <div class="row justify-content-md-between">
+                <div class="col-md-12">
+                  <iframe id="md" width="853" height="480" src="https://www.youtube.com/embed/{{movieDetail.href}}"
+                  title="{{movieDetail.title}}"  
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </article>
+</div>
+<!-- Detail -->

@@ -1,0 +1,217 @@
+<!-- seat -->
+<div class="row card">
+    <div class="col-md-12 card-header">
+        <div class="row fw-bold bg-dark text-light p-3" align="middle">
+            <h5>BOOKING ONLINE</h5>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- seat -->
+        <div ng-hide="isCombo" class="row">
+            <div class="row bg-warning p-3" align="middle">
+                <span>{{cinemaName}} | {{type}} | số ghế: 42/42</span>
+            </div>
+            <div class="row bg-secondary p-2 fw-bold" align="middle">
+                <span>Người / Ghế</span>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <hr class="border border-5 border-secondary">
+                </div>
+                <div class="col-md-12" align="middle">
+                    <h4 class="fw-bolder text-secondary">SCREEN</h4>
+                </div>
+                <div class="col-md-6">
+                    <hr class="border border-5 border-secondary">
+                </div>
+            </div>
+            <div class="col-md-12" align="middle">
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">A1</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">A2</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" class="me-3" name="seat">A3</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">A4</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">A5</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">A6</span>
+                <br>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">B1</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">B2</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" class="me-3" name="seat">B3</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">B4</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">B5</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">B6</span>
+                <br>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">C1</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">C2</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" class="me-3" name="seat">C3</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">C4</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">C5</span>
+                <span style="width:5px;height:23px;"
+                ng-click="chooseSeat($event)" name="seat">C6</span>
+                <br><br>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D1</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D2</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D3</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D4</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D5</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D6</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D7</span>
+                <span style="width:5px;height:23px;background-color:blue; color:white;"
+                ng-click="chooseSeat($event)" name="seat">D8</span>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-2">
+                    <div class="row justify-content-center" style="display: inline-block;">
+                        <span style="width:5px;height:23px;background-color: rgb(156, 64, 64);"></span> <span>Checked</span><br>
+                        <span style="width:5px;height:23px;background-color: rgb(117, 112, 112);"></span> <span>Đã chọn</span><br>
+                        <span style="width:20px;height:23px;background-color: rgb(117, 112, 112); color:white;">x</span> <span>Không thể chọn</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="row justify-content-center" style="display: inline-block;">
+                        <span style="width:5px;height:23px;border:1px solid green;"></span> <span>Thường</span><br>
+                        <span style="width:5px;height:23px;border:1px solid red;"></span> <span>VIP</span><br>
+                        <span style="width:20px;height:23px;background-color: rgb(30, 11, 237);"></span> <span>Ghế đôi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- seat -->
+        <!-- combo -->
+        <div ng-show="isCombo" class="row justify-content-md-between"><!-- ng-repeat thì hàm chỉ áp dụng được cho mỗi thằng đầu -->
+            <div ng-repeat="p in arrCombo track by $index" class="col-md-5">  
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="image/combo/combo{{$index + 1}}.png" alt="">
+                </div>
+                <div class="col-md-8">
+                  <div class="row my-3">
+                    <div class="col-md-12">
+                      <h3>{{p.name}}</h3>
+                      <br>
+                      <span name="comboDescripe"></span>
+                      Giắ: <span name="comboPrice" id="comboPrice">{{p.price}}</span>,00đ<br>
+                      Thành tiền: <strong name="comboTotal" id="comboTotal1"></strong>
+                    </div>
+                    <div class="col-md-6">
+                      <button ng-click="editIndexCombo($event, $index)" class="btn btn-danger" style="width:35px;">
+                        -
+                      </button>
+                      <input type="text" name="comboIndex" id="comboIndex" style="width:40px;" class="text-center pb-2" value="0" readonly>
+                      <button ng-click="editIndexCombo($event, $index)" class="btn btn-danger" style="width:35px;">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- combo -->
+    </div>
+    <div class="card-footer">
+        <div class="row justify-content-center bg-dark text-light p-3">
+            <div class="col-md-2 align-self-center">
+                <div class="card text-align-center">
+                    <button ng-click="isCombo=false; next();"
+                     type="button" class="btn btn-secondary pb-3 border-5 fs-2 fw-bolder" data-bs-toggle="modal" data-bs-target="#trailerModal">
+                      <span><-</span>
+                      <br>
+                      PRE
+                    </button>
+                  </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="image/newMovie/{{movieDetail.image}}" alt="" style="width:80px;">
+                              </div>
+                              <div class="col-md-9">
+                                <span>{{movieDetail.title}}</span>
+                                <span>{{movieDetail.type}}</span>
+                                <span>{{movieDetail[0]}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <span>{{cinemaName}}</span>
+                        <span>{{time}}</span>
+                        <span>{{day}}</span>
+                        <span>{{city}}</span>
+                        <span>Ghế:</span><span ng-show="arrSeat != null" ng-repeat="p in arrSeat">{{p}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span>Tiền: {{pricePerSeat| number : 0}}</span><br>
+                        <span>Combo: {{pricePerCombo| number : 0}}</span><br>
+                        <span>Tổng: {{total| number : 0}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 align-self-center">
+                <div class="card text-align-center">
+                    <button ng-show="!nextStep" ng-click="showComboDescripe(); next();" type="button" class="btn btn-danger pb-3 border-5 fs-2 fw-bolder" data-bs-toggle="modal" data-bs-target="#comboModal">
+                      <span>-></span>
+                      <br>
+                      NEXT
+                    </button>
+                    <a href="#!cart" ng-if="nextStep" ng-click="showComboDescripe()" type="button" class="btn btn-danger pb-3 border-5 fs-2 fw-bolder">
+                      <span>-></span>
+                      <br>
+                      NEXT
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- seat -->
+<!-- Choose cinema place modal -->
+  <div class="modal fade" id="comboModal" tabindex="-1" aria-labelledby="comboModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Thông tin vé</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Tôi xác nhận mua vé cho người xem từ 13 tuổi trở lên. 
+                CGV không được phép phục vụ khách hàng dưới 16 tuổi cho các suất chiếu kết thúc sau 23:00. 
+                CGV sẽ không hoàn tiền nếu người xem không đáp ứng đủ điều kiện. 
+                Tham khảo <span style="color:red;">quy định của Bộ Văn Hóa, Thể Thao và Du Lịch</span>.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button ng-click="isCombo=true"
+            type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đồng ý</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Choose cinema place modal -->

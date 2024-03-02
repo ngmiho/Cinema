@@ -1,0 +1,150 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-5 my-4">
+        <!-- Table Form -->
+        <div class="table-responsive">
+            <table class="table border">
+                <h2 align="middle">THÔNG TIN VÉ</h2>
+                <thead class="align-middle">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tiêu Đề Phim</th>
+                    <th scope="col">Thông Tin Vé</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Giảm</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="p in cartTickets track by $index">
+                    <td>{{$index + 1}}</td>
+                    <td>{{p.title}}</td>
+                    <td>
+                        {{time}} {{day}} {{city}} {{cinemaName}} {{type}} <br>
+                        Seat: <span ng-repeat="s in arrSeat track by $index">-{{s}}</span>
+                        <!-- Combo: <span ng-repeat="c in arrCombo track by $index">{{c.name}}<br></span> -->
+                    </td>
+                    <td>{{total | number : 0}} VND</td>
+                    <td>0%</td>
+                    <td><button class="btn btn-danger" ng-click="removeTicket($index)">XÓA</button></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr align="end">
+                        <th scope="row" colspan="4">Total</th>
+                        <th scope="row">{{total | number : 0}} VND</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <ul class="list-group text-center">
+                <li class="list-group-item">Số lượng sản phẩm: {{cartTickets.length}}</li>
+                <li class="list-group-item" style="font-weight:bold;">Giảm:  VND</li>
+                <li class="list-group-item" style="font-weight:bold;">Tổng tiền cần thanh toán:  VND</li>
+            </ul>
+        </div>
+        <!-- Table Form -->
+    </div>
+</div>
+<div class="row justify-content-md-center">
+  <div class="col-md-5 my-4">
+      <!-- Sign Up Form -->
+     <div class="card p-4">
+      <form action="" method="">
+          <div class="row justify-content-md-center">
+              <div class="mb-3">
+                  <h2 align="middle">THANH TOÁN</h2>
+              </div>
+              <div class="col-md-6 my-2">
+                  <div class="mb-3">
+                      <label for="creditCardNumber" class="form-label">Số Thẻ </label>
+                      <input type="text" class="form-control" id="creditCardNumber" aria-describedby="creditCardNumberHepler">
+                      <div id="creditCardNumberHepler" class="form-text">message</div>
+                  </div>
+              </div>
+              <div class="col-md-6 my-2">
+                  <div class="mb-3">
+                      <label for="owner" class="form-label">Chủ Thẻ</label>
+                      <input type="text" class="form-control" id="owner" aria-describedby="ownerHelper">
+                      <div id="ownerHelper" class="form-text">message</div>
+                  </div>
+              </div>
+              <div class="col-md-6 my-2">
+                  <div class="mb-3">
+                      <label for="validDate" class="form-label">Hiệu Lực</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="validDate">
+                      <div id="validDate" class="form-text">message</div>
+                  </div>
+              </div>
+              <div class="col-md-6 my-2">
+                  <div class="mb-3">
+                      <label for="branch" class="form-label">Ngân Hàng</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="branchHelper">
+                      <div id="branchHelper" class="form-text">message</div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-3 my-2">
+                      <div class="card text-center" style="height: 100px;">
+                          <img src="image/payment/momo.png" class="card-img-top" alt="Momo" style="width: 50px; align-self: center;">
+                          <div class="card-body">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    Momo
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 my-2">
+                      <div class="card text-center" style="height: 100px;">
+                          <img src="image/payment/zalopay.png" class="card-img-top" alt="..." style="width: 50px; align-self: center;">
+                          <div class="card-body">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    ZaloPay
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 my-2">
+                      <div class="card text-center" style="height: 100px;">
+                          <img src="image/payment/visa.png" class="card-img-top" alt="..." style="width: 50px;height:50px; align-self: center;">
+                          <div class="card-body">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    Visa
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 my-2">
+                      <div class="card text-center" style="height:100px;">
+                          <div class="form-check align-self-center mt-5">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                Other
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 d-grid gap-2"> 
+                  <a href="#!home" ng-click="payment()" type="submit" class="btn btn-secondary">
+                    Thanh Toán
+                   </a>
+              </div>
+              <div class="col-md-6 d-grid gap-2"> 
+                  <button type="reset" class="btn btn-secondary"><a href="#!home">Hủy</a></button>
+              </div>
+              <div ng-show="checkPayment" class="text-center">Thanh toán thành công</div>
+               <div ng-show="!checkPayment" class="text-center">Thanh toán không thành công</div>
+          </div>
+      </form>
+     </div>
+      <!-- Sign Up Form -->
+  </div>
+</div>
